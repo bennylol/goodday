@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="好日子便當店 - 提供新鮮、健康的便當選擇">
+    <meta name="keywords" content="便當,台北便當,健康便當,炸雞便當,牛肉便當,素食便當">
+    <title>好日子便當店 - 新鮮美味的便當選擇</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 頁首 -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://scontent.ftpe8-2.fna.fbcdn.net/v/t39.30808-6/291741757_552868239872966_8584766679181922553_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ZajTLhfWvRgQ7kNvgHH1dYE&_nc_zt=23&_nc_ht=scontent.ftpe8-2.fna&_nc_gid=AYAEM6VQ_HtlrJnkIN2GJPZ&oh=00_AYChfb9poYIfUNgTHRusPQaou246QCyWjn5fa2rvTAhfCA&oe=674A06D3" alt="好日子便當店" class="logo-img">
+                    <h1>好日子便當店</h1>
+                </div>
+                <nav class="main-nav">
+                    <button class="mobile-menu-btn" aria-label="選單">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="#menu" class="nav-link"><i class="fas fa-utensils"></i> 菜單</a></li>
+                        <li><a href="#about" class="nav-link"><i class="fas fa-store"></i> 關於我們</a></li>
+                        <li><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> 聯絡我們</a></li>
+                        <li class="order-now"><a href="tel:0123456789" class="nav-link phone-link"><i class="fas fa-phone-alt"></i> 立即訂購</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主頁橫幅 -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">每日新鮮，快速健康便當！</h2>
+                <p class="hero-subtitle">用心製作，新鮮食材，美味便當</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary"><i class="fas fa-book-open"></i> 查看菜單</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> 立即訂購</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色服務 -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>快速送達</h3>
+                    <p>30分鐘內送達</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>新鮮食材</h3>
+                    <p>每日採購</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>用心製作</h3>
+                    <p>如同家常味道</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 菜單 -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">本日菜單</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">全部</button>
+                <button class="category-btn" data-category="meat">葷食</button>
+                <button class="category-btn" data-category="vegetarian">素食</button>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="meat">
+                    <div class="menu-item-image">
+                        <img src="https://lh3.googleusercontent.com/k8FsN2RRBeT23NMpP8wUJISYntIA1IiTHmctDHOYJfP2EkAqCDy37C3i5y_Zf0XTMpfT1FxJkKHJFIv_Q-YWc0GKPPg0sg=s600" alt="炸雞便當" loading="lazy">
+                        <span class="menu-item-badge">熱門</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>炸雞便當</h3>
+                        <p class="menu-item-description">香脆多汁的炸雞，搭配新鮮蔬菜、白飯和溏心蛋</p>
+                        <div class="menu-item-footer">
+                            <span class="price">NT$ 120</span>
+                            <button class="btn btn-order" onclick="orderItem('炸雞便當', 120)">
+                                <i class="fas fa-shopping-cart"></i> 訂購
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="meat">
+                    <div class="menu-item-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzU95MZap53ZEPw_u8KrTvmPBMT43E5Vpcg&s" alt="牛肉便當" loading="lazy">
+                        <span class="menu-item-badge">推薦</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>牛肉便當</h3>
+                        <p class="menu-item-description">嫩滑牛肉片，搭配季節蔬菜、白飯和溏心蛋</p>
+                        <div class="menu-item-footer">
+                            <span class="price">NT$ 150</span>
+                            <button class="btn btn-order" onclick="orderItem('牛肉便當', 150)">
+                                <i class="fas fa-shopping-cart"></i> 訂購
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-item-image">
+                        <img src="https://lh3.googleusercontent.com/SOgdRAh69VIK-rRAEOhUb0Z2BTvHLDH1u0-EiPaw5rx81gveP07MQuDIsZXzvBdQrYA2SQlv1hfj1NGdcg-kVxaejqzlNfXJ=s600" alt="素食便當" loading="lazy">
+                        <span class="menu-item-badge">健康</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>素食便當</h3>
+                        <p class="menu-item-description">健康豆腐、有機蔬菜、糙米飯和滷蛋</p>
+                        <div class="menu-item-footer">
+                            <span class="price">NT$ 100</span>
+                            <button class="btn btn-order" onclick="orderItem('素食便當', 100)">
+                                <i class="fas fa-shopping-cart"></i> 訂購
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我們 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">關於我們</h2>
+                    <p class="about-description">我們是一家專注於提供新鮮、健康便當的店家，致力於讓每位顧客享受美味與便捷的餐點選擇。</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> 每日新鮮食材</li>
+                        <li><i class="fas fa-check"></i> 衛生安全把關</li>
+                        <li><i class="fas fa-check"></i> 快速外送服務</li>
+                        <li><i class="fas fa-check"></i> 環保包裝設計</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://2afoodie.com/wp-content/uploads/20200404155520_34.jpg" alt="店面照片" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">聯絡我們</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>電話訂購</h3>
+                        <p><a href="tel:0123456789">0123-456789</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>店面地址</h3>
+                        <p>台北市大安區便當路10號</p>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-map">
+                            <i class="fas fa-map"></i> 查看地圖
+                        </a>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>營業時間</h3>
+                        <p>週一至週六：10:00-20:00</p>
+                        <p>週日公休</p>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required placeholder="請輸入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">電子郵件</label>
+                        <input type="email" id="email" name="email" required placeholder="請輸入您的電子郵件">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話</label>
+                        <input type="tel" id="phone" name="phone" placeholder="請輸入您的電話">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">訊息內容</label>
+                        <textarea id="message" name="message" required placeholder="請輸入您的訊息"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-paper-plane"></i> 送出訊息
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 回到頂端按鈕 -->
+    <button id="scrollTopBtn" class="scroll-top" aria-label="回到頂端">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>好日子便當店</h3>
+                    <p>提供美味、健康的便當選擇</p>
+                    <p>電話：<a href="tel:0123456789">0123-456789</a></p>
+                </div>
+                <div class="footer-hours">
+                    <h3>營業時間</h3>
+                    <p>週一至週六：10:00-20:00</p>
+                    <p>週日公休</p>
+                </div>
+                <div class="footer-social">
+                    <h3>社群媒體</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Line"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 好日子便當店 版權所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
